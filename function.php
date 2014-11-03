@@ -1,5 +1,4 @@
 <?php
-require_once('../background/function_web.php');
 /* 登入
 Params:
     uacc: 帳號
