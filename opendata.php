@@ -7,7 +7,7 @@ $opendata = array();
 // for ($i=0; $i < count($food_url) ; $i++) { 
 // 	unset($food_url[$i]['sc_id']);
 // }
- unset($food_url[0]['sc_id']);
+ unset($food_url['sc_id']);
 echo json_encode($food_url[0]);
 
 
