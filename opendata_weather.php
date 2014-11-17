@@ -9,9 +9,10 @@ foreach ($weather_url as $key ) {
 		foreach ($key as $key2 =>$value) {
 			if($key2 == 'icon'){
 				$icon = "http://openweathermap.org/img/w/".$value.".png";
+				array_push($opendata, $icon);
 			}
 		}
-		array_push($opendata, $icon);
+		
 	}
 }
 
