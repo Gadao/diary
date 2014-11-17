@@ -8,6 +8,6 @@ $opendata = array();
 // 	unset($food_url[$i]['sc_id']);
 // }
 // unset($food_url[0]['sc_id']);
-echo $food_url[0]['type'];
+echo $food_url[0];
 
 
