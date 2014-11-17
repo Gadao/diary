@@ -5,7 +5,7 @@ $weather_url = json_decode(file_get_contents( "http://api.openweathermap.org/dat
 
 
 	
-$icon = "http://openweathermap.org/img/w/".$weather_url['weather'][0]['icon'].".png";	
+$icon = $weather_url['weather'][0]['icon'].".png";	
 $opendata = array("map"=>array( "weather"=> "$icon" ));
 
 echo json_encode($opendata);
