@@ -9,6 +9,6 @@ echo $weather_url;
 $icon = "http://openweathermap.org/img/w/".$weather_url['weather']['icon'].".png";	
 array_push($opendata, $icon);
 
- echo json_encode($opendata);
+ echo json_encode($weather_url);
 
 
