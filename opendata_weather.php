@@ -7,10 +7,11 @@ $opendata = array();
 foreach ($weather_url as $key ) {
 	if($key == 'weather' ){
 		foreach ($key as $key2 =>$value) {
-			if($key2 == 'icon'){
-				$icon = "http://openweathermap.org/img/w/".$value.".png";
-				array_push($opendata, $icon);
-			}
+			// if($key2 == 'icon'){
+			// 	$icon = "http://openweathermap.org/img/w/".$value.".png";
+			// 	array_push($opendata, $icon);
+			// }
+			echo $value;
 		}
 		
 	}
