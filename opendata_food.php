@@ -12,7 +12,7 @@ for ($i=0; $i < count($food_url) ; $i++) {
  	unset($food_url[$i]['id']);
 	unset($food_url[$i]['catalogs_id']);
 	unset($food_url[$i]['create_date']);
- 	
+ 	unset($food_url[$i]['type']);
 }
 
 echo json_encode($food_url);
