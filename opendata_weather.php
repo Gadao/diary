@@ -5,6 +5,7 @@ $weather_url = json_decode(file_get_contents( "http://api.openweathermap.org/dat
 
 $opendata = array();
 foreach ($weather_url as $key ) {
+	echo $key;
 	if($key == 'weather' ){
 		foreach ($key as $key2 =>$value) {
 			// if($key2 == 'icon'){
