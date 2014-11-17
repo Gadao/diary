@@ -15,7 +15,7 @@ foreach ($weather_url as $key => $value) {
 	// 	}
 		
 	// }
-	echo $key."  ".$value;
+	echo $key."  ";
 }
 
  echo json_encode($opendata);
