@@ -11,7 +11,7 @@ foreach ($weather_url as $key ) {
 			// 	$icon = "http://openweathermap.org/img/w/".$value.".png";
 			// 	array_push($opendata, $icon);
 			// }
-			echo $value;
+			echo $key2;
 		}
 		
 	}
