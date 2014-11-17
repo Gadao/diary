@@ -4,7 +4,12 @@ require_once('loader.php');
 $food_url = json_decode(file_get_contents( "http://data.coa.gov.tw/Service/OpenData/CC/FoodData.aspx" ),true);
 
 $opendata = array();
-for ($i=0; $i < count($food_url) ; $i++) {  	
+for ($i=0; $i < count($food_url) ; $i++) {
+	if($food_url[$i]['x']=='')  {
+		unset($food_url[$i]);
+		continue;
+	}
+
  	unset($food_url[$i]['sc_id']);
  	unset($food_url[$i]['link']);
  	unset($food_url[$i]['id']);
