@@ -5,20 +5,22 @@ $food_url = json_decode(file_get_contents( "http://data.coa.gov.tw/Service/OpenD
 
 $opendata = array();
 for ($i=0; $i < count($food_url) ; $i++) {
+
+	$city = mb_substr($food_url[$i]['address'],0,3,"utf-8");
+	$area = mb_substr($food_url[$i]['address'],3,3,"utf-8");
+	$food_url[$i]['city']=$city;
+	$food_url[$i]['area']=$area;
+if($food_url[$i]['city']!==$_GET['city']){
+		unset($food_url[$i]);
+		
+	}
 	if($food_url[$i]['x']=='')  {
 		unset($food_url[$i]);
 		continue;
 	}
 	
-	$city = mb_substr($food_url[$i]['address'],0,3,"utf-8");
-	$area = mb_substr($food_url[$i]['address'],3,3,"utf-8");
-
-	$food_url[$i]['city']=$city;
-	$food_url[$i]['area']=$area;
-	if($food_url[$i]['city']!==$_GET['city']){
-		unset($food_url[$i]);
-		
-	}
+	
+	
  	unset($food_url[$i]['sc_id']);
  	unset($food_url[$i]['link']);
  	unset($food_url[$i]['id']);
