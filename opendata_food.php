@@ -9,13 +9,16 @@ for ($i=0; $i < count($food_url) ; $i++) {
 		unset($food_url[$i]);
 		continue;
 	}
-	if(isset($food_url[$i]['address'])){
-		$arr_address = str_split($food_url[$i]['address']));
-		$city = $arr_address[0].$arr_address[1].$arr_address[2];
-		$area = $arr_address[3].$arr_address[4].$arr_address[5];
-	}
+	
+	$city = mb_substr($food_url[$i]['address'],0,3,"utf-8");
+	$area = mb_substr($food_url[$i]['address'],3,3,"utf-8");
+
 	$food_url[$i]['city']=$city;
 	$food_url[$i]['area']=$area;
+	if($food_url[$i]['city']!==$_GET['city']){
+		unset($food_url[$i]);
+		
+	}
  	unset($food_url[$i]['sc_id']);
  	unset($food_url[$i]['link']);
  	unset($food_url[$i]['id']);
