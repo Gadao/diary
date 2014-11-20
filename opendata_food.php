@@ -10,16 +10,11 @@ for ($i=0; $i < count($food_url) ; $i++) {
 	$area = mb_substr($food_url[$i]['address'],3,3,"utf-8");
 	$food_url[$i]['city']=$city;
 	$food_url[$i]['area']=$area;
-if($food_url[$i]['city']!==$_GET['city']){
-		unset($food_url[$i]);
+	if($food_url[$i]['x']!='')
+	if($food_url[$i]['city']===$_GET['city']){
+		array_push($opendata,$food_url[$i]);	
 		
 	}
-	if($food_url[$i]['x']=='')  {
-		unset($food_url[$i]);
-		continue;
-	}
-	
-	
 	
  	unset($food_url[$i]['sc_id']);
  	unset($food_url[$i]['link']);
@@ -29,6 +24,6 @@ if($food_url[$i]['city']!==$_GET['city']){
  	unset($food_url[$i]['type']);
 }
 
-echo json_encode($food_url);
+echo json_encode($opendata);
 
 
