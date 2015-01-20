@@ -12,10 +12,9 @@ for ($i=0; $i < count($food_url) ; $i++) {
 	$food_url[$i]['area']=$area;
 	if($food_url[$i]['x']!='')
 	if($food_url[$i]['city']===$_GET['city']){
+		$sum_city='1';
 		array_push($opendata,$food_url[$i]);	
-		
 	}
-	
  	unset($food_url[$i]['sc_id']);
  	unset($food_url[$i]['link']);
  	unset($food_url[$i]['id']);
