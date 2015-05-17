@@ -8,6 +8,7 @@ for ($i=0; $i < count($food_url) ; $i++) {
 
 	$city = mb_substr($food_url[$i]['address'],0,3,"utf-8");
 	$area = mb_substr($food_url[$i]['address'],3,3,"utf-8");
+	
 	$food_url[$i]['city']=$city;
 	$food_url[$i]['area']=$area;
 	if($food_url[$i]['x']!='')

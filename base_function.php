@@ -1,4 +1,5 @@
 <?php
+
 /* 資料查詢
 Params:
     sql: SQL指令
