@@ -7,4 +7,3 @@ $dt = sql_q($sql,array());
 $sql_2 = "SELECT SUM(status) FROM goods WHERE aid=?";
 $ans = sql_q($sql_2,array($_POST['aid']));
 
-echo 
